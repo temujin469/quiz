@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    padding:0;
+    margin:0;   
+    background-image:linear-gradient(to left, #109df5, #f52f4c); 
+    display:grid;
+    place-content:center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+.qu-box{
+    width:500px;
+    min-height: 100px;
+    background-color: white;
+    border-radius:20px;
+    box-shadow:5px 5px 10px 5px rgba(0, 0, 0, 0.37);
+    overflow: hidden;
+}
+header{
+    padding: 15px 20px;
+    background-color: #028de9 ;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    color:#fff;
+    font-size: 20px;
+    position: relative;
+}
+.line{
+    width: 0;
+    height: 3px;
+    background-color: yellowgreen;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+main{
+    padding: 0 20px 20px;
+}
+h4{
+    margin: 0;
+    padding: 20px 20px 10px;
+    font-size: 20px;
+}
+.qu-an{
+    display:none;
+}
+.qu-an.active{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.answer-row{
+    position: relative;
+}
+.answer-row input{
+    position: absolute;
+    left: 0;
+    top:0;
+    height:100%;
+    width:100%;
+    opacity: 0;
+    cursor:pointer;
+}
+.answer-row span{
+    padding: 10px 20px;
+    background-color: #97acc7;
+    display: block;
+    border-radius:20px;
+    transition:0.2s ease-in-out;
+}
+.answer-row:hover span{
+    background-color: #6f8790 ;
+}
+.answer-row input:checked+span{
+    background-color: tomato;
+    color: white;
+}
+.answer-row input[valid]:checked+span{
+    background-color: rgb(72, 209, 17);
+    color:white;
+}
+footer{
+    padding:0px 20px 20px;
+    display: flex;
+    justify-content: end;
+}
+footer button {
+    padding: 6px 20px;
+    background-color: #028de9 ;
+    color:#ffff;
+    outline:none;
+    border: none;
+    border-radius:20px;
+    font-size: 20px;
+    cursor:pointer;
+    transition:0.2s ease-in-out;
+}
+footer button:hover{
+    background-color:#075d95 ;
+}
+#rest{
+    display: none;
+}
+@media(max-width:600px){
+    body{
+        margin: 10px;
+    }
+    .qu-box{
+        width: 100%;
+        display: block;
+    }
+}
